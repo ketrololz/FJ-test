@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "make": "Audi",
+    "model": "A3",
+    "year": "2021",
+    "modelId": "79107",
+    "imageUrl": "/img/a3-2021.jpeg"
+  },
+  {
+    "id": "2",
+    "make": "Audi",
+    "model": "Q5",
+    "year": "2021",
+    "modelId": "80065",
+    "imageUrl": "/img/q5-2021.jpeg"
+  },
+  {
+    "id": "3",
+    "make": "Toyota",
+    "model": "4Runner",
+    "year": "2021",
+    "modelId": "80800",
+    "imageUrl": "/img/4runner-2021.jpeg"
+  },
+  {
+    "id": "4",
+    "make": "Toyota",
+    "model": "Camry",
+    "year": "2021",
+    "modelId": "80853",
+    "imageUrl": "/img/camry-2021.jpg"
+  },
+  {
+    "id": "5",
+    "make": "Nissan",
+    "model": "370Z",
+    "year": "2019",
+    "modelId": "75314",
+    "imageUrl": "/img/370z-2019.jpg"
+  },
+  {
+    "id": "6",
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": "2021",
+    "modelId": "80427",
+    "imageUrl": "/img/corolla-2021.webp"
+  },
+  {
+    "id": "7",
+    "make": "Nissan",
+    "model": "Juke",
+    "year": "2019",
+    "modelId": "76430",
+    "imageUrl": "/img/juke-2019.webp"
+  },
+  {
+    "id": "8",
+    "make": "Honda",
+    "model": "Accord",
+    "year": "2020",
+    "modelId": "78045",
+    "imageUrl": "/img/accord-2020.png"
+  },
+  {
+    "id": "9",
+    "make": "Volkswagen",
+    "model": "Passat",
+    "year": "2021",
+    "modelId": "80200",
+    "imageUrl": "/img/passat-2021.webp"
+  },
+  {
+    "id": "10",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year": "2021",
+    "modelId": "79721",
+    "imageUrl": "/img/golf-2021.webp"
+  },
+  {
+    "id": "11",
+    "make": "Ford",
+    "model": "Focus",
+    "year": "2017",
+    "modelId": "69361",
+    "imageUrl": "/img/focus-2017.webp"
+  },
+  {
+    "id": "12",
+    "make": "Kia",
+    "model": "Rio",
+    "year": "2022",
+    "modelId": "82888",
+    "imageUrl": "/img/rio-2022.jpeg"
+  }
+]
