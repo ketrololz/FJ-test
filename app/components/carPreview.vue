@@ -32,7 +32,7 @@ const props = defineProps<Props>();
     <NuxtImg
       v-if="imageUrl"
       :src="imageUrl"
-      class="h-full w-[50%] object-cover object-center rounded-l-xl"
+      class="w-[50%] object-cover object-center rounded-l-xl"
     >
     </NuxtImg>
   </div>

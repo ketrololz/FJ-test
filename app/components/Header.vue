@@ -13,8 +13,10 @@ watch(input, () => {
   <div
     class="border-b border-neutral-300 py-2 flex gap-10 justify-between md:justify-start"
   >
-    <span class="text-xl font-bold">CarCatalog</span
-    ><UInput
+    <NuxtLink to="/">
+      <span class="text-xl font-bold">CarCatalog</span>
+    </NuxtLink>
+    <UInput
       icon="i-lucide-search"
       color="neutral"
       variant="soft"
