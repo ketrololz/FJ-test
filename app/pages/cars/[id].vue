@@ -6,7 +6,7 @@ const route = useRoute();
 const carsStore = useCarsStore();
 const { cars } = storeToRefs(carsStore);
 
-const isLoading = ref(false);
+const isLoading = ref(true);
 const car = ref<Car>();
 const selectedCar = ref(null);
 
@@ -50,59 +50,76 @@ onMounted(async () => {
         />
       </template>
       <template v-if="car && selectedCar">
-        <div
-          class="p-4 w-full h-full flex flex-col bg-neutral-100 border border-neutral-300/70 rounded-xl overflow-hidden min-h-50 shadow-sm shadow-neutral-200/35"
-        >
-          <h3 class="text-lg font-bold text-default mb-4">
-            {{ car.make }}
-          </h3>
-          <div class="flex flex-col">
-            <p class="text-neutral-400">
-              Модель:
-              <span class="text-sm text-default font-semibold">
-                {{ car.model }}
-              </span>
-            </p>
-            <p class="text-neutral-400">
-              Год выпуска:
-              <span class="text-sm text-default font-semibold">
-                {{ car.year }}
-              </span>
-            </p>
-            <p class="text-neutral-400" v-if="selectedCar['make_country']">
-              Страна:
-              <span class="text-sm text-default font-semibold">
-                {{ selectedCar["make_country"] }}
-              </span>
-            </p>
-            <p class="text-neutral-400" v-if="selectedCar['model_engine_l']">
-              Объём двигателя:
-              <span class="text-sm text-default font-semibold">
-                {{ selectedCar["model_engine_l"] }} л
-              </span>
-            </p>
-            <p
-              class="text-neutral-400"
-              v-if="selectedCar['model_engine_power_hp']"
-            >
-              Мощность двигателя:
-              <span class="text-sm text-default font-semibold">
-                {{ selectedCar["model_engine_power_hp"] }} л/c
-              </span>
-            </p>
-            <p class="text-neutral-400" v-if="selectedCar['model_doors']">
-              Кол-во дверей:
-              <span class="text-sm text-default font-semibold">
-                {{ selectedCar["model_doors"] }}
-              </span>
-            </p>
+        <div class="w-full h-full flex flex-col gap-4">
+          <div
+            class="p-4 w-full h-full flex flex-col bg-neutral-100 border border-neutral-300/70 rounded-xl overflow-hidden min-h-50 shadow-sm shadow-neutral-200/35"
+          >
+            <h3 class="text-lg font-bold text-default mb-4">
+              {{ car.make }}
+            </h3>
+            <div class="flex flex-col">
+              <p class="text-neutral-400">
+                Модель:
+                <span class="text-sm text-default font-semibold">
+                  {{ car.model }}
+                </span>
+              </p>
+              <p class="text-neutral-400">
+                Год выпуска:
+                <span class="text-sm text-default font-semibold">
+                  {{ car.year }}
+                </span>
+              </p>
+              <p class="text-neutral-400" v-if="selectedCar['make_country']">
+                Страна:
+                <span class="text-sm text-default font-semibold">
+                  {{ selectedCar["make_country"] }}
+                </span>
+              </p>
+              <p class="text-neutral-400" v-if="selectedCar['model_engine_l']">
+                Объём двигателя:
+                <span class="text-sm text-default font-semibold">
+                  {{ selectedCar["model_engine_l"] }} л
+                </span>
+              </p>
+              <p
+                class="text-neutral-400"
+                v-if="selectedCar['model_engine_power_hp']"
+              >
+                Мощность двигателя:
+                <span class="text-sm text-default font-semibold">
+                  {{ selectedCar["model_engine_power_hp"] }} л/c
+                </span>
+              </p>
+              <p class="text-neutral-400" v-if="selectedCar['model_doors']">
+                Кол-во дверей:
+                <span class="text-sm text-default font-semibold">
+                  {{ selectedCar["model_doors"] }}
+                </span>
+              </p>
+            </div>
           </div>
+          <NuxtLink to="/">
+            <UButton
+              icon="ion:return-up-back"
+              color="neutral"
+              class="max-w-40 justify-center items-center cursor-pointer"
+              label="В каталог"
+            ></UButton>
+          </NuxtLink>
         </div>
         <NuxtImg
           v-if="car.imageUrl"
           :src="car.imageUrl"
           class="h-full w-full md:w-[50%] max-h-100 object-cover object-center rounded-xl"
         ></NuxtImg>
+      </template>
+      <template v-if="!car && !isLoading">
+        <div
+          class="text-center w-full h-40 flex justify-center items-center pb-5"
+        >
+          <span>Не удалось загрузить данные об автомобиле :(</span>
+        </div>
       </template>
     </div>
   </div>
